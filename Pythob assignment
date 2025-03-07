@@ -1,0 +1,62 @@
+1. ZeroDivisionError
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+2. ValueError
+try:
+    num = int(input("Enter a number: "))
+except ValueError:
+    print("Error: Invalid input. Please enter a valid number.")
+
+3. FileNotFoundError
+try:
+    with open("nonexistent_file.txt", "r") as file:
+        content = file.read()
+except FileNotFoundError:
+    print("Error: File not found.")
+
+4. IndexError
+try:
+    numbers = [1, 2, 3]
+    print(numbers[5])
+except IndexError:
+    print("Error: Index out of range.")
+
+5. KeyError
+try:
+    my_dict = {"name": "Alice"}
+    print(my_dict["age"])
+except KeyError:
+    print("Error: Key not found in dictionary.")
+
+6. TypeError
+try:
+    result = "5" + 5
+except TypeError:
+    print("Error: Cannot add a string and an integer.")
+
+7. AttributeError
+try:
+    number = 10
+    number.append(5)  # 'int' has no 'append' method
+except AttributeError:
+    print("Error: 'int' object has no attribute 'append'.")
+
+8. ImportError
+try:
+    import non_existent_module
+except ImportError:
+    print("Error: Module not found.")
+
+9. NameError
+try:
+    print(undeclared_variable)
+except NameError:
+    print("Error: Variable not defined.")
+
+10. Exception
+try:
+    result = 10 / int("a")
+except Exception as e:
